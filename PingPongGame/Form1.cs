@@ -123,6 +123,16 @@ namespace PingPongGame
                 gameover_lbl.Visible = false;
                 action_lbl.Visible = false;
                 pause_lbl.Visible = false;
+                basic_lbl.Visible = true;
+                advanced_lbl.Visible = false;
+                hard_lbl.Visible = false;
+                insane_lbl.Visible = false;
+                holy_lbl.Visible = false;
+                star1.Visible = false;
+                star2.Visible = false;
+                star3.Visible = false;
+                star4.Visible = false;
+
 
             }
             if(e.KeyCode == Keys.Space)
