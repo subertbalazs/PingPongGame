@@ -66,7 +66,7 @@
             // 
             this.points_lbl.AutoSize = true;
             this.points_lbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.points_lbl.ForeColor = System.Drawing.Color.Red;
+            this.points_lbl.ForeColor = System.Drawing.Color.RoyalBlue;
             this.points_lbl.Location = new System.Drawing.Point(186, 9);
             this.points_lbl.Name = "points_lbl";
             this.points_lbl.Size = new System.Drawing.Size(52, 54);
@@ -98,12 +98,12 @@
             this.gameover_lbl.AutoSize = true;
             this.gameover_lbl.BackColor = System.Drawing.Color.White;
             this.gameover_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gameover_lbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gameover_lbl.Font = new System.Drawing.Font("Courier New", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gameover_lbl.ForeColor = System.Drawing.Color.Red;
             this.gameover_lbl.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.gameover_lbl.Location = new System.Drawing.Point(657, 462);
             this.gameover_lbl.Name = "gameover_lbl";
-            this.gameover_lbl.Size = new System.Drawing.Size(286, 56);
+            this.gameover_lbl.Size = new System.Drawing.Size(571, 112);
             this.gameover_lbl.TabIndex = 6;
             this.gameover_lbl.Text = "Game Over";
             this.gameover_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
