@@ -15,6 +15,8 @@ namespace PingPongGame
         public int speed_left = 4;
         public int speed_top = 4;
         public int point = 0;
+        public bool isPasused = false;
+
 
 
         public Form1()
@@ -69,7 +71,7 @@ namespace PingPongGame
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Escape) { this.Close(); }
-            if(e.KeyCode == Keys.Space)
+            if(e.KeyCode == Keys.Enter)
             {
                 ball.Top = 50;
                 ball.Left = 50;
@@ -80,6 +82,19 @@ namespace PingPongGame
                 timer1.Enabled = true;
                 gameover_lbl.Visible = false;
 
+            }
+            if(e.KeyCode == Keys.Space)
+            {
+                if(isPasused)
+                {
+                    timer1.Enabled = true;
+                    isPasused = false;
+                }
+                else
+                {
+                isPasused = true;
+                timer1.Enabled = false;
+                }
             }
         }
 

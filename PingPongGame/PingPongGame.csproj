@@ -52,6 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -103,6 +106,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\asztal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labda1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\narancs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labda2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labda3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labda4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asztal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asztal2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablepingpong01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablepingpong011.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
