@@ -37,15 +37,24 @@
             this.pause_lbl = new System.Windows.Forms.Label();
             this.action_lbl = new System.Windows.Forms.Label();
             this.gameover_lbl = new System.Windows.Forms.Label();
-            this.racket = new System.Windows.Forms.PictureBox();
-            this.asztal = new System.Windows.Forms.PictureBox();
             this.advanced_lbl = new System.Windows.Forms.Label();
             this.hard_lbl = new System.Windows.Forms.Label();
-            this.ball = new OvalPictureBox();
             this.insane_lbl = new System.Windows.Forms.Label();
+            this.star1 = new System.Windows.Forms.PictureBox();
+            this.racket = new System.Windows.Forms.PictureBox();
+            this.asztal = new System.Windows.Forms.PictureBox();
+            this.star2 = new System.Windows.Forms.PictureBox();
+            this.star3 = new System.Windows.Forms.PictureBox();
+            this.star4 = new System.Windows.Forms.PictureBox();
+            this.holy_lbl = new System.Windows.Forms.Label();
+            this.ball = new OvalPictureBox();
             this.playground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.star1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +89,11 @@
             // playground
             // 
             this.playground.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.playground.Controls.Add(this.holy_lbl);
+            this.playground.Controls.Add(this.star4);
+            this.playground.Controls.Add(this.star3);
+            this.playground.Controls.Add(this.star2);
+            this.playground.Controls.Add(this.star1);
             this.playground.Controls.Add(this.insane_lbl);
             this.playground.Controls.Add(this.hard_lbl);
             this.playground.Controls.Add(this.advanced_lbl);
@@ -151,26 +165,6 @@
             this.gameover_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gameover_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
-            // racket
-            // 
-            this.racket.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.racket.Image = global::PingPongGame.Properties.Resources.uto2;
-            this.racket.Location = new System.Drawing.Point(107, 288);
-            this.racket.Name = "racket";
-            this.racket.Size = new System.Drawing.Size(297, 97);
-            this.racket.TabIndex = 2;
-            this.racket.TabStop = false;
-            // 
-            // asztal
-            // 
-            this.asztal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.asztal.Image = global::PingPongGame.Properties.Resources.tablepingpong011;
-            this.asztal.Location = new System.Drawing.Point(-47, -383);
-            this.asztal.Name = "asztal";
-            this.asztal.Size = new System.Drawing.Size(1320, 1024);
-            this.asztal.TabIndex = 7;
-            this.asztal.TabStop = false;
-            // 
             // advanced_lbl
             // 
             this.advanced_lbl.AutoSize = true;
@@ -191,6 +185,83 @@
             this.hard_lbl.TabIndex = 13;
             this.hard_lbl.Text = "Hard level";
             // 
+            // insane_lbl
+            // 
+            this.insane_lbl.AutoSize = true;
+            this.insane_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.insane_lbl.Location = new System.Drawing.Point(17, 63);
+            this.insane_lbl.Name = "insane_lbl";
+            this.insane_lbl.Size = new System.Drawing.Size(166, 23);
+            this.insane_lbl.TabIndex = 14;
+            this.insane_lbl.Text = "Insane Level";
+            // 
+            // star1
+            // 
+            this.star1.Image = global::PingPongGame.Properties.Resources.star;
+            this.star1.Location = new System.Drawing.Point(21, 89);
+            this.star1.Name = "star1";
+            this.star1.Size = new System.Drawing.Size(35, 35);
+            this.star1.TabIndex = 15;
+            this.star1.TabStop = false;
+            this.star1.Click += new System.EventHandler(this.star1_Click);
+            // 
+            // racket
+            // 
+            this.racket.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.racket.Image = global::PingPongGame.Properties.Resources.uto2;
+            this.racket.Location = new System.Drawing.Point(107, 288);
+            this.racket.Name = "racket";
+            this.racket.Size = new System.Drawing.Size(297, 97);
+            this.racket.TabIndex = 2;
+            this.racket.TabStop = false;
+            // 
+            // asztal
+            // 
+            this.asztal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.asztal.Image = global::PingPongGame.Properties.Resources.tablepingpong011;
+            this.asztal.Location = new System.Drawing.Point(-47, -383);
+            this.asztal.Name = "asztal";
+            this.asztal.Size = new System.Drawing.Size(1320, 1024);
+            this.asztal.TabIndex = 7;
+            this.asztal.TabStop = false;
+            // 
+            // star2
+            // 
+            this.star2.Image = global::PingPongGame.Properties.Resources.star;
+            this.star2.Location = new System.Drawing.Point(62, 89);
+            this.star2.Name = "star2";
+            this.star2.Size = new System.Drawing.Size(35, 35);
+            this.star2.TabIndex = 16;
+            this.star2.TabStop = false;
+            // 
+            // star3
+            // 
+            this.star3.Image = global::PingPongGame.Properties.Resources.star;
+            this.star3.Location = new System.Drawing.Point(103, 89);
+            this.star3.Name = "star3";
+            this.star3.Size = new System.Drawing.Size(35, 35);
+            this.star3.TabIndex = 17;
+            this.star3.TabStop = false;
+            // 
+            // star4
+            // 
+            this.star4.Image = global::PingPongGame.Properties.Resources.star;
+            this.star4.Location = new System.Drawing.Point(145, 89);
+            this.star4.Name = "star4";
+            this.star4.Size = new System.Drawing.Size(35, 35);
+            this.star4.TabIndex = 18;
+            this.star4.TabStop = false;
+            // 
+            // holy_lbl
+            // 
+            this.holy_lbl.AutoSize = true;
+            this.holy_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.holy_lbl.Location = new System.Drawing.Point(17, 63);
+            this.holy_lbl.Name = "holy_lbl";
+            this.holy_lbl.Size = new System.Drawing.Size(179, 23);
+            this.holy_lbl.TabIndex = 20;
+            this.holy_lbl.Text = "HOLY SH*T!!!!";
+            // 
             // ball
             // 
             this.ball.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -203,16 +274,6 @@
             this.ball.TabIndex = 8;
             this.ball.TabStop = false;
             // 
-            // insane_lbl
-            // 
-            this.insane_lbl.AutoSize = true;
-            this.insane_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.insane_lbl.Location = new System.Drawing.Point(27, 63);
-            this.insane_lbl.Name = "insane_lbl";
-            this.insane_lbl.Size = new System.Drawing.Size(166, 23);
-            this.insane_lbl.TabIndex = 14;
-            this.insane_lbl.Text = "Insane Level";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,8 +285,12 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.playground.ResumeLayout(false);
             this.playground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.star1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             this.ResumeLayout(false);
 
@@ -246,6 +311,11 @@
         private System.Windows.Forms.Label advanced_lbl;
         private System.Windows.Forms.Label hard_lbl;
         private System.Windows.Forms.Label insane_lbl;
+        private System.Windows.Forms.PictureBox star1;
+        private System.Windows.Forms.PictureBox star4;
+        private System.Windows.Forms.PictureBox star3;
+        private System.Windows.Forms.PictureBox star2;
+        private System.Windows.Forms.Label holy_lbl;
     }
 }
 

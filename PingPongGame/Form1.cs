@@ -41,6 +41,11 @@ namespace PingPongGame
             advanced_lbl.Visible = false;
             hard_lbl.Visible = false;
             insane_lbl.Visible = false;
+            holy_lbl.Visible = false;
+            star1.Visible = false;
+            star2.Visible = false;
+            star3.Visible = false;
+            star4.Visible = false;
         }
     
         private void timer1_Tick(object sender, EventArgs e)
@@ -60,17 +65,26 @@ namespace PingPongGame
                 {
                     basic_lbl.Visible = false;
                     advanced_lbl.Visible = true;
+                    star1.Visible = true;
                 }
 
                 if(points >= 10 && points < 15)
                 {
                     advanced_lbl.Visible = false;
                     hard_lbl.Visible = true;
+                    star2.Visible = true;
                 }
-                if(points >= 15)
+                if(points >= 15 && points < 20)
                 {
                     hard_lbl.Visible = false;
                     insane_lbl.Visible = true;
+                    star3.Visible = true;
+                }
+                if(points >= 20)
+                {
+                    insane_lbl.Visible = false;
+                    holy_lbl.Visible = true;
+                    star4.Visible = true;
                 }
             }
 
@@ -139,6 +153,11 @@ namespace PingPongGame
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void star1_Click(object sender, EventArgs e)
         {
 
         }
