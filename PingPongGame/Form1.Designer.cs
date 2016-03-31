@@ -33,12 +33,16 @@
             this.Score = new System.Windows.Forms.Label();
             this.points_lbl = new System.Windows.Forms.Label();
             this.playground = new System.Windows.Forms.Panel();
+            this.basic_lbl = new System.Windows.Forms.Label();
+            this.pause_lbl = new System.Windows.Forms.Label();
+            this.action_lbl = new System.Windows.Forms.Label();
             this.gameover_lbl = new System.Windows.Forms.Label();
             this.racket = new System.Windows.Forms.PictureBox();
             this.asztal = new System.Windows.Forms.PictureBox();
-            this.action_lbl = new System.Windows.Forms.Label();
-            this.pause_lbl = new System.Windows.Forms.Label();
+            this.advanced_lbl = new System.Windows.Forms.Label();
+            this.hard_lbl = new System.Windows.Forms.Label();
             this.ball = new OvalPictureBox();
+            this.insane_lbl = new System.Windows.Forms.Label();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).BeginInit();
@@ -76,6 +80,10 @@
             // playground
             // 
             this.playground.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.playground.Controls.Add(this.insane_lbl);
+            this.playground.Controls.Add(this.hard_lbl);
+            this.playground.Controls.Add(this.advanced_lbl);
+            this.playground.Controls.Add(this.basic_lbl);
             this.playground.Controls.Add(this.pause_lbl);
             this.playground.Controls.Add(this.action_lbl);
             this.playground.Controls.Add(this.ball);
@@ -91,6 +99,40 @@
             this.playground.Size = new System.Drawing.Size(1362, 741);
             this.playground.TabIndex = 2;
             this.playground.Paint += new System.Windows.Forms.PaintEventHandler(this.playground_Paint);
+            // 
+            // basic_lbl
+            // 
+            this.basic_lbl.AutoSize = true;
+            this.basic_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.basic_lbl.Location = new System.Drawing.Point(27, 63);
+            this.basic_lbl.Name = "basic_lbl";
+            this.basic_lbl.Size = new System.Drawing.Size(153, 23);
+            this.basic_lbl.TabIndex = 11;
+            this.basic_lbl.Text = "Basic level";
+            // 
+            // pause_lbl
+            // 
+            this.pause_lbl.AutoSize = true;
+            this.pause_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pause_lbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pause_lbl.ForeColor = System.Drawing.Color.Green;
+            this.pause_lbl.Location = new System.Drawing.Point(546, 250);
+            this.pause_lbl.Name = "pause_lbl";
+            this.pause_lbl.Size = new System.Drawing.Size(170, 56);
+            this.pause_lbl.TabIndex = 10;
+            this.pause_lbl.Text = "Pause";
+            // 
+            // action_lbl
+            // 
+            this.action_lbl.AutoSize = true;
+            this.action_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.action_lbl.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.action_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.action_lbl.Location = new System.Drawing.Point(560, 523);
+            this.action_lbl.Name = "action_lbl";
+            this.action_lbl.Size = new System.Drawing.Size(350, 84);
+            this.action_lbl.TabIndex = 9;
+            this.action_lbl.Text = "Enter - Restart\r\nEsc - Exit";
             // 
             // gameover_lbl
             // 
@@ -129,29 +171,25 @@
             this.asztal.TabIndex = 7;
             this.asztal.TabStop = false;
             // 
-            // action_lbl
+            // advanced_lbl
             // 
-            this.action_lbl.AutoSize = true;
-            this.action_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.action_lbl.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.action_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.action_lbl.Location = new System.Drawing.Point(560, 523);
-            this.action_lbl.Name = "action_lbl";
-            this.action_lbl.Size = new System.Drawing.Size(350, 84);
-            this.action_lbl.TabIndex = 9;
-            this.action_lbl.Text = "Enter - Restart\r\nEsc - Exit";
+            this.advanced_lbl.AutoSize = true;
+            this.advanced_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.advanced_lbl.Location = new System.Drawing.Point(27, 63);
+            this.advanced_lbl.Name = "advanced_lbl";
+            this.advanced_lbl.Size = new System.Drawing.Size(192, 23);
+            this.advanced_lbl.TabIndex = 12;
+            this.advanced_lbl.Text = "Advanced level";
             // 
-            // pause_lbl
+            // hard_lbl
             // 
-            this.pause_lbl.AutoSize = true;
-            this.pause_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pause_lbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pause_lbl.ForeColor = System.Drawing.Color.Green;
-            this.pause_lbl.Location = new System.Drawing.Point(546, 250);
-            this.pause_lbl.Name = "pause_lbl";
-            this.pause_lbl.Size = new System.Drawing.Size(170, 56);
-            this.pause_lbl.TabIndex = 10;
-            this.pause_lbl.Text = "Pause";
+            this.hard_lbl.AutoSize = true;
+            this.hard_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.hard_lbl.Location = new System.Drawing.Point(27, 63);
+            this.hard_lbl.Name = "hard_lbl";
+            this.hard_lbl.Size = new System.Drawing.Size(140, 23);
+            this.hard_lbl.TabIndex = 13;
+            this.hard_lbl.Text = "Hard level";
             // 
             // ball
             // 
@@ -164,6 +202,16 @@
             this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ball.TabIndex = 8;
             this.ball.TabStop = false;
+            // 
+            // insane_lbl
+            // 
+            this.insane_lbl.AutoSize = true;
+            this.insane_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.insane_lbl.Location = new System.Drawing.Point(27, 63);
+            this.insane_lbl.Name = "insane_lbl";
+            this.insane_lbl.Size = new System.Drawing.Size(166, 23);
+            this.insane_lbl.TabIndex = 14;
+            this.insane_lbl.Text = "Insane Level";
             // 
             // Form1
             // 
@@ -194,6 +242,10 @@
         private OvalPictureBox ball;
         private System.Windows.Forms.Label action_lbl;
         private System.Windows.Forms.Label pause_lbl;
+        private System.Windows.Forms.Label basic_lbl;
+        private System.Windows.Forms.Label advanced_lbl;
+        private System.Windows.Forms.Label hard_lbl;
+        private System.Windows.Forms.Label insane_lbl;
     }
 }
 

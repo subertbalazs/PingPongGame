@@ -14,7 +14,7 @@ namespace PingPongGame
     {
         public int speed_left = 4;
         public int speed_top = 4;
-        public int point = 0;
+        public int points = 0;
         public bool isPasused = false;
 
 
@@ -38,6 +38,9 @@ namespace PingPongGame
             gameover_lbl.Visible = false;
             action_lbl.Visible = false;
             pause_lbl.Visible = false;
+            advanced_lbl.Visible = false;
+            hard_lbl.Visible = false;
+            insane_lbl.Visible = false;
         }
     
         private void timer1_Tick(object sender, EventArgs e)
@@ -51,8 +54,24 @@ namespace PingPongGame
                 speed_top += 2;
                 speed_left += 2;
                 speed_top = -speed_top;
-                point += 1;
-                points_lbl.Text = point.ToString();
+                points += 1;
+                points_lbl.Text = points.ToString();
+                if(points >= 5 && points < 10)
+                {
+                    basic_lbl.Visible = false;
+                    advanced_lbl.Visible = true;
+                }
+
+                if(points >= 10 && points < 15)
+                {
+                    advanced_lbl.Visible = false;
+                    hard_lbl.Visible = true;
+                }
+                if(points >= 15)
+                {
+                    hard_lbl.Visible = false;
+                    insane_lbl.Visible = true;
+                }
             }
 
             if(ball.Left <= playground.Left)
@@ -84,7 +103,7 @@ namespace PingPongGame
                 ball.Left = 50;
                 speed_left = 4;
                 speed_top = 4;
-                point = 0;
+                points = 0;
                 points_lbl.Text = "0";
                 timer1.Enabled = true;
                 gameover_lbl.Visible = false;
