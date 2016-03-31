@@ -36,6 +36,8 @@
             this.gameover_lbl = new System.Windows.Forms.Label();
             this.racket = new System.Windows.Forms.PictureBox();
             this.asztal = new System.Windows.Forms.PictureBox();
+            this.action_lbl = new System.Windows.Forms.Label();
+            this.pause_lbl = new System.Windows.Forms.Label();
             this.ball = new OvalPictureBox();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
@@ -74,6 +76,8 @@
             // playground
             // 
             this.playground.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.playground.Controls.Add(this.pause_lbl);
+            this.playground.Controls.Add(this.action_lbl);
             this.playground.Controls.Add(this.ball);
             this.playground.Controls.Add(this.gameover_lbl);
             this.playground.Controls.Add(this.points_lbl);
@@ -92,15 +96,16 @@
             // 
             this.gameover_lbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.gameover_lbl.AutoSize = true;
-            this.gameover_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.gameover_lbl.BackColor = System.Drawing.Color.White;
+            this.gameover_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gameover_lbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gameover_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gameover_lbl.ForeColor = System.Drawing.Color.Red;
             this.gameover_lbl.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.gameover_lbl.Location = new System.Drawing.Point(657, 462);
             this.gameover_lbl.Name = "gameover_lbl";
-            this.gameover_lbl.Size = new System.Drawing.Size(458, 216);
+            this.gameover_lbl.Size = new System.Drawing.Size(286, 56);
             this.gameover_lbl.TabIndex = 6;
-            this.gameover_lbl.Text = "Game Over\r\n\r\nSpace - Restart\r\nEsc - Exit";
+            this.gameover_lbl.Text = "Game Over";
             this.gameover_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gameover_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -123,6 +128,30 @@
             this.asztal.Size = new System.Drawing.Size(1320, 1024);
             this.asztal.TabIndex = 7;
             this.asztal.TabStop = false;
+            // 
+            // action_lbl
+            // 
+            this.action_lbl.AutoSize = true;
+            this.action_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.action_lbl.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.action_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.action_lbl.Location = new System.Drawing.Point(560, 523);
+            this.action_lbl.Name = "action_lbl";
+            this.action_lbl.Size = new System.Drawing.Size(350, 84);
+            this.action_lbl.TabIndex = 9;
+            this.action_lbl.Text = "Enter - Restart\r\nEsc - Exit";
+            // 
+            // pause_lbl
+            // 
+            this.pause_lbl.AutoSize = true;
+            this.pause_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pause_lbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pause_lbl.ForeColor = System.Drawing.Color.Green;
+            this.pause_lbl.Location = new System.Drawing.Point(546, 250);
+            this.pause_lbl.Name = "pause_lbl";
+            this.pause_lbl.Size = new System.Drawing.Size(170, 56);
+            this.pause_lbl.TabIndex = 10;
+            this.pause_lbl.Text = "Pause";
             // 
             // ball
             // 
@@ -163,6 +192,8 @@
         private System.Windows.Forms.Label gameover_lbl;
         private System.Windows.Forms.PictureBox asztal;
         private OvalPictureBox ball;
+        private System.Windows.Forms.Label action_lbl;
+        private System.Windows.Forms.Label pause_lbl;
     }
 }
 

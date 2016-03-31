@@ -30,8 +30,14 @@ namespace PingPongGame
             this.Bounds = Screen.PrimaryScreen.Bounds;
             racket.Top = playground.Bottom - (playground.Bottom / 7);
             gameover_lbl.Left = (playground.Width / 2) - (gameover_lbl.Width / 2);
-            gameover_lbl.Top = (playground.Height / 2) - (gameover_lbl.Height / 2);
+            gameover_lbl.Top = (playground.Height / 3) - (gameover_lbl.Height / 3);
+            action_lbl.Left = (playground.Width / 2) - (action_lbl.Width / 2);
+            action_lbl.Top = (playground.Height /2) - (action_lbl.Height / 2);
+            pause_lbl.Left = (playground.Width / 2) - (pause_lbl.Width / 2);
+            pause_lbl.Top = (playground.Height / 3) - (pause_lbl.Height / 3);
             gameover_lbl.Visible = false;
+            action_lbl.Visible = false;
+            pause_lbl.Visible = false;
         }
     
         private void timer1_Tick(object sender, EventArgs e)
@@ -65,6 +71,7 @@ namespace PingPongGame
             {
                 timer1.Enabled = false;
                 gameover_lbl.Visible = true;
+                action_lbl.Visible = true;
             }
         }
 
@@ -81,6 +88,8 @@ namespace PingPongGame
                 points_lbl.Text = "0";
                 timer1.Enabled = true;
                 gameover_lbl.Visible = false;
+                action_lbl.Visible = false;
+                pause_lbl.Visible = false;
 
             }
             if(e.KeyCode == Keys.Space)
@@ -88,12 +97,14 @@ namespace PingPongGame
                 if(isPasused)
                 {
                     timer1.Enabled = true;
+                    pause_lbl.Visible = false;
                     isPasused = false;
                 }
                 else
                 {
                 isPasused = true;
                 timer1.Enabled = false;
+                pause_lbl.Visible = true;
                 }
             }
         }
