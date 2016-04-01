@@ -12,7 +12,7 @@ namespace PingPongGame
 {
     public partial class Form1 : Form
     {
-        public int speed_left = 4;
+        public int speed_left = 1;
         public int speed_top = 4;
         public int points = 0;
         public bool isPasused = false;
@@ -90,6 +90,7 @@ namespace PingPongGame
                     insane_lbl.Visible = false;
                     holy_lbl.Visible = true;
                     star4.Visible = true;
+                    progressBar1.Visible = false;
                 }
             }
 

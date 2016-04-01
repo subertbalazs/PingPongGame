@@ -45,18 +45,18 @@
             this.basic_lbl = new System.Windows.Forms.Label();
             this.pause_lbl = new System.Windows.Forms.Label();
             this.action_lbl = new System.Windows.Forms.Label();
-            this.ball = new OvalPictureBox();
             this.gameover_lbl = new System.Windows.Forms.Label();
             this.racket = new System.Windows.Forms.PictureBox();
             this.asztal = new System.Windows.Forms.PictureBox();
+            this.ball = new OvalPictureBox();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -132,9 +132,9 @@
             this.holy_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.holy_lbl.Location = new System.Drawing.Point(27, 63);
             this.holy_lbl.Name = "holy_lbl";
-            this.holy_lbl.Size = new System.Drawing.Size(179, 23);
+            this.holy_lbl.Size = new System.Drawing.Size(166, 23);
             this.holy_lbl.TabIndex = 20;
-            this.holy_lbl.Text = "HOLY SH*T!!!!";
+            this.holy_lbl.Text = "Holy Sh*t!!!";
             // 
             // star4
             // 
@@ -221,9 +221,9 @@
             this.pause_lbl.ForeColor = System.Drawing.Color.Green;
             this.pause_lbl.Location = new System.Drawing.Point(546, 250);
             this.pause_lbl.Name = "pause_lbl";
-            this.pause_lbl.Size = new System.Drawing.Size(170, 56);
+            this.pause_lbl.Size = new System.Drawing.Size(199, 56);
             this.pause_lbl.TabIndex = 10;
-            this.pause_lbl.Text = "Pause";
+            this.pause_lbl.Text = "Paused";
             // 
             // action_lbl
             // 
@@ -237,18 +237,6 @@
             this.action_lbl.TabIndex = 9;
             this.action_lbl.Text = "Press Enter to retry\r\nPress Esc to Quit";
             this.action_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ball
-            // 
-            this.ball.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ball.BackColor = System.Drawing.Color.Transparent;
-            this.ball.Image = global::PingPongGame.Properties.Resources.labda1;
-            this.ball.Location = new System.Drawing.Point(542, 306);
-            this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(26, 29);
-            this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ball.TabIndex = 8;
-            this.ball.TabStop = false;
             // 
             // gameover_lbl
             // 
@@ -287,6 +275,18 @@
             this.asztal.TabIndex = 7;
             this.asztal.TabStop = false;
             // 
+            // ball
+            // 
+            this.ball.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ball.BackColor = System.Drawing.Color.Transparent;
+            this.ball.Image = global::PingPongGame.Properties.Resources.labda1;
+            this.ball.Location = new System.Drawing.Point(542, 306);
+            this.ball.Name = "ball";
+            this.ball.Size = new System.Drawing.Size(26, 29);
+            this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ball.TabIndex = 8;
+            this.ball.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,9 +302,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.star3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             this.ResumeLayout(false);
 
         }
