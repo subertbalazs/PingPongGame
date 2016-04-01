@@ -48,6 +48,7 @@
             this.gameover_lbl = new System.Windows.Forms.Label();
             this.racket = new System.Windows.Forms.PictureBox();
             this.asztal = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.ball = new OvalPictureBox();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
@@ -74,7 +75,6 @@
             this.Score.Size = new System.Drawing.Size(197, 54);
             this.Score.TabIndex = 4;
             this.Score.Text = "Score:";
-            this.Score.Click += new System.EventHandler(this.Score_Click);
             // 
             // points_lbl
             // 
@@ -114,7 +114,7 @@
             this.playground.Name = "playground";
             this.playground.Size = new System.Drawing.Size(1354, 733);
             this.playground.TabIndex = 2;
-            this.playground.Paint += new System.Windows.Forms.PaintEventHandler(this.playground_Paint);
+//            this.playground.Paint += new System.Windows.Forms.PaintEventHandler(this.playground_Paint);
             // 
             // progressBar1
             // 
@@ -124,7 +124,7 @@
             this.progressBar1.Size = new System.Drawing.Size(159, 23);
             this.progressBar1.Step = 5;
             this.progressBar1.TabIndex = 21;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+//            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // holy_lbl
             // 
@@ -171,7 +171,7 @@
             this.star1.Size = new System.Drawing.Size(35, 35);
             this.star1.TabIndex = 15;
             this.star1.TabStop = false;
-            this.star1.Click += new System.EventHandler(this.star1_Click);
+//            this.star1.Click += new System.EventHandler(this.star1_Click);
             // 
             // insane_lbl
             // 
@@ -253,7 +253,7 @@
             this.gameover_lbl.TabIndex = 6;
             this.gameover_lbl.Text = "Game Over";
             this.gameover_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.gameover_lbl.Click += new System.EventHandler(this.label1_Click);
+//            this.gameover_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // racket
             // 
@@ -274,6 +274,11 @@
             this.asztal.Size = new System.Drawing.Size(1320, 1024);
             this.asztal.TabIndex = 7;
             this.asztal.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 300;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // ball
             // 
@@ -330,6 +335,7 @@
         private System.Windows.Forms.PictureBox star2;
         private System.Windows.Forms.Label holy_lbl;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

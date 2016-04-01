@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace PingPongGame
 {
     public partial class Form1 : Form
     {
-        public int speed_left = 1;
-        public int speed_top = 4;
+        public int speed_left = 3;
+        public int speed_top = 3;
         public int points = 0;
         public bool isPasused = false;
 
@@ -60,8 +61,8 @@ namespace PingPongGame
 
             if(ball.Bottom >= racket.Top && ball.Bottom <= racket.Bottom && ball.Left >= racket.Left && ball.Right <= racket.Right)
             {
-                speed_top += 2;
-                speed_left += 2;
+                speed_top += 1;
+                speed_left += 1;
                 speed_top = -speed_top;
                 points += 1;
                 IncrementProgressBar();
@@ -70,7 +71,7 @@ namespace PingPongGame
                 {
                     basic_lbl.Visible = false;
                     advanced_lbl.Visible = true;
-                    star1.Visible = true;
+                    star1.Visible = true;              
                 }
 
                 if(points >= 10 && points < 15)
@@ -91,6 +92,7 @@ namespace PingPongGame
                     holy_lbl.Visible = true;
                     star4.Visible = true;
                     progressBar1.Visible = false;
+                    timer2.Enabled = true;                                   
                 }
             }
 
@@ -138,7 +140,7 @@ namespace PingPongGame
                 star2.Visible = false;
                 star3.Visible = false;
                 star4.Visible = false;
-
+                timer2.Enabled = false;
 
             }
             if(e.KeyCode == Keys.Space)
@@ -166,29 +168,32 @@ namespace PingPongGame
                 progressBar1.Value = 0;
             }
         }
-
-        private void playground_Paint(object sender, PaintEventArgs e)
+        private void FlashingStars()
         {
-
+            Thread worker2 = new Thread(new ThreadStart(thread2));
+            worker2.Start();
+           
         }
 
-        private void Score_Click(object sender, EventArgs e)
+        private void thread2()
         {
-
+            while (true)
+            {
+                System.Threading.Thread.Sleep(1000);
+                star1.Visible = false;
+                System.Threading.Thread.Sleep(1000);
+                star1.Visible = true;
+                System.Threading.Thread.Sleep(1000);
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)
         {
+            star1.Visible = !star1.Visible;
+            star2.Visible = !star2.Visible;
+            star3.Visible = !star2.Visible;
+            star4.Visible = !star2.Visible;
 
-        }
-
-        private void star1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
 
         }
     }
