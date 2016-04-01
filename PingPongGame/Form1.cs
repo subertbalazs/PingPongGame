@@ -46,6 +46,10 @@ namespace PingPongGame
             star2.Visible = false;
             star3.Visible = false;
             star4.Visible = false;
+            progressBar1.Maximum = 5;
+            progressBar1.Step = 1;
+            progressBar1.Value = 0;
+           
         }
     
         private void timer1_Tick(object sender, EventArgs e)
@@ -60,6 +64,7 @@ namespace PingPongGame
                 speed_left += 2;
                 speed_top = -speed_top;
                 points += 1;
+                IncrementProgressBar();
                 points_lbl.Text = points.ToString();
                 if(points >= 5 && points < 10)
                 {
@@ -152,6 +157,15 @@ namespace PingPongGame
             }
         }
 
+        private void IncrementProgressBar()
+        {
+            progressBar1.Value += 1;
+            if(progressBar1.Value == 5)
+            {
+                progressBar1.Value = 0;
+            }
+        }
+
         private void playground_Paint(object sender, PaintEventArgs e)
         {
 
@@ -168,6 +182,11 @@ namespace PingPongGame
         }
 
         private void star1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }

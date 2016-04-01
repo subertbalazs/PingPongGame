@@ -33,29 +33,30 @@
             this.Score = new System.Windows.Forms.Label();
             this.points_lbl = new System.Windows.Forms.Label();
             this.playground = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.holy_lbl = new System.Windows.Forms.Label();
+            this.star4 = new System.Windows.Forms.PictureBox();
+            this.star3 = new System.Windows.Forms.PictureBox();
+            this.star2 = new System.Windows.Forms.PictureBox();
+            this.star1 = new System.Windows.Forms.PictureBox();
+            this.insane_lbl = new System.Windows.Forms.Label();
+            this.hard_lbl = new System.Windows.Forms.Label();
+            this.advanced_lbl = new System.Windows.Forms.Label();
             this.basic_lbl = new System.Windows.Forms.Label();
             this.pause_lbl = new System.Windows.Forms.Label();
             this.action_lbl = new System.Windows.Forms.Label();
+            this.ball = new OvalPictureBox();
             this.gameover_lbl = new System.Windows.Forms.Label();
-            this.advanced_lbl = new System.Windows.Forms.Label();
-            this.hard_lbl = new System.Windows.Forms.Label();
-            this.insane_lbl = new System.Windows.Forms.Label();
-            this.star1 = new System.Windows.Forms.PictureBox();
             this.racket = new System.Windows.Forms.PictureBox();
             this.asztal = new System.Windows.Forms.PictureBox();
-            this.star2 = new System.Windows.Forms.PictureBox();
-            this.star3 = new System.Windows.Forms.PictureBox();
-            this.star4 = new System.Windows.Forms.PictureBox();
-            this.holy_lbl = new System.Windows.Forms.Label();
-            this.ball = new OvalPictureBox();
             this.playground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -89,6 +90,7 @@
             // playground
             // 
             this.playground.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.playground.Controls.Add(this.progressBar1);
             this.playground.Controls.Add(this.holy_lbl);
             this.playground.Controls.Add(this.star4);
             this.playground.Controls.Add(this.star3);
@@ -110,9 +112,96 @@
             this.playground.Location = new System.Drawing.Point(0, 0);
             this.playground.Margin = new System.Windows.Forms.Padding(5);
             this.playground.Name = "playground";
-            this.playground.Size = new System.Drawing.Size(1362, 741);
+            this.playground.Size = new System.Drawing.Size(1354, 733);
             this.playground.TabIndex = 2;
             this.playground.Paint += new System.Windows.Forms.PaintEventHandler(this.playground_Paint);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.progressBar1.Location = new System.Drawing.Point(21, 131);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(159, 23);
+            this.progressBar1.Step = 5;
+            this.progressBar1.TabIndex = 21;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // holy_lbl
+            // 
+            this.holy_lbl.AutoSize = true;
+            this.holy_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.holy_lbl.Location = new System.Drawing.Point(27, 63);
+            this.holy_lbl.Name = "holy_lbl";
+            this.holy_lbl.Size = new System.Drawing.Size(179, 23);
+            this.holy_lbl.TabIndex = 20;
+            this.holy_lbl.Text = "HOLY SH*T!!!!";
+            // 
+            // star4
+            // 
+            this.star4.Image = global::PingPongGame.Properties.Resources.star;
+            this.star4.Location = new System.Drawing.Point(145, 89);
+            this.star4.Name = "star4";
+            this.star4.Size = new System.Drawing.Size(35, 35);
+            this.star4.TabIndex = 18;
+            this.star4.TabStop = false;
+            // 
+            // star3
+            // 
+            this.star3.Image = global::PingPongGame.Properties.Resources.star;
+            this.star3.Location = new System.Drawing.Point(103, 89);
+            this.star3.Name = "star3";
+            this.star3.Size = new System.Drawing.Size(35, 35);
+            this.star3.TabIndex = 17;
+            this.star3.TabStop = false;
+            // 
+            // star2
+            // 
+            this.star2.Image = global::PingPongGame.Properties.Resources.star;
+            this.star2.Location = new System.Drawing.Point(62, 89);
+            this.star2.Name = "star2";
+            this.star2.Size = new System.Drawing.Size(35, 35);
+            this.star2.TabIndex = 16;
+            this.star2.TabStop = false;
+            // 
+            // star1
+            // 
+            this.star1.Image = global::PingPongGame.Properties.Resources.star;
+            this.star1.Location = new System.Drawing.Point(21, 89);
+            this.star1.Name = "star1";
+            this.star1.Size = new System.Drawing.Size(35, 35);
+            this.star1.TabIndex = 15;
+            this.star1.TabStop = false;
+            this.star1.Click += new System.EventHandler(this.star1_Click);
+            // 
+            // insane_lbl
+            // 
+            this.insane_lbl.AutoSize = true;
+            this.insane_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.insane_lbl.Location = new System.Drawing.Point(17, 63);
+            this.insane_lbl.Name = "insane_lbl";
+            this.insane_lbl.Size = new System.Drawing.Size(166, 23);
+            this.insane_lbl.TabIndex = 14;
+            this.insane_lbl.Text = "Insane Level";
+            // 
+            // hard_lbl
+            // 
+            this.hard_lbl.AutoSize = true;
+            this.hard_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.hard_lbl.Location = new System.Drawing.Point(27, 63);
+            this.hard_lbl.Name = "hard_lbl";
+            this.hard_lbl.Size = new System.Drawing.Size(140, 23);
+            this.hard_lbl.TabIndex = 13;
+            this.hard_lbl.Text = "Hard level";
+            // 
+            // advanced_lbl
+            // 
+            this.advanced_lbl.AutoSize = true;
+            this.advanced_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.advanced_lbl.Location = new System.Drawing.Point(27, 63);
+            this.advanced_lbl.Name = "advanced_lbl";
+            this.advanced_lbl.Size = new System.Drawing.Size(192, 23);
+            this.advanced_lbl.TabIndex = 12;
+            this.advanced_lbl.Text = "Advanced level";
             // 
             // basic_lbl
             // 
@@ -148,6 +237,18 @@
             this.action_lbl.TabIndex = 9;
             this.action_lbl.Text = "Enter - Restart\r\nEsc - Exit";
             // 
+            // ball
+            // 
+            this.ball.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ball.BackColor = System.Drawing.Color.Transparent;
+            this.ball.Image = global::PingPongGame.Properties.Resources.labda1;
+            this.ball.Location = new System.Drawing.Point(542, 306);
+            this.ball.Name = "ball";
+            this.ball.Size = new System.Drawing.Size(26, 29);
+            this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ball.TabIndex = 8;
+            this.ball.TabStop = false;
+            // 
             // gameover_lbl
             // 
             this.gameover_lbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -157,53 +258,13 @@
             this.gameover_lbl.Font = new System.Drawing.Font("Courier New", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gameover_lbl.ForeColor = System.Drawing.Color.Red;
             this.gameover_lbl.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.gameover_lbl.Location = new System.Drawing.Point(657, 462);
+            this.gameover_lbl.Location = new System.Drawing.Point(653, 454);
             this.gameover_lbl.Name = "gameover_lbl";
             this.gameover_lbl.Size = new System.Drawing.Size(571, 112);
             this.gameover_lbl.TabIndex = 6;
             this.gameover_lbl.Text = "Game Over";
             this.gameover_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gameover_lbl.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // advanced_lbl
-            // 
-            this.advanced_lbl.AutoSize = true;
-            this.advanced_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.advanced_lbl.Location = new System.Drawing.Point(27, 63);
-            this.advanced_lbl.Name = "advanced_lbl";
-            this.advanced_lbl.Size = new System.Drawing.Size(192, 23);
-            this.advanced_lbl.TabIndex = 12;
-            this.advanced_lbl.Text = "Advanced level";
-            // 
-            // hard_lbl
-            // 
-            this.hard_lbl.AutoSize = true;
-            this.hard_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.hard_lbl.Location = new System.Drawing.Point(27, 63);
-            this.hard_lbl.Name = "hard_lbl";
-            this.hard_lbl.Size = new System.Drawing.Size(140, 23);
-            this.hard_lbl.TabIndex = 13;
-            this.hard_lbl.Text = "Hard level";
-            // 
-            // insane_lbl
-            // 
-            this.insane_lbl.AutoSize = true;
-            this.insane_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.insane_lbl.Location = new System.Drawing.Point(17, 63);
-            this.insane_lbl.Name = "insane_lbl";
-            this.insane_lbl.Size = new System.Drawing.Size(166, 23);
-            this.insane_lbl.TabIndex = 14;
-            this.insane_lbl.Text = "Insane Level";
-            // 
-            // star1
-            // 
-            this.star1.Image = global::PingPongGame.Properties.Resources.star;
-            this.star1.Location = new System.Drawing.Point(21, 89);
-            this.star1.Name = "star1";
-            this.star1.Size = new System.Drawing.Size(35, 35);
-            this.star1.TabIndex = 15;
-            this.star1.TabStop = false;
-            this.star1.Click += new System.EventHandler(this.star1_Click);
             // 
             // racket
             // 
@@ -219,79 +280,30 @@
             // 
             this.asztal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.asztal.Image = global::PingPongGame.Properties.Resources.tablepingpong011;
-            this.asztal.Location = new System.Drawing.Point(-47, -383);
+            this.asztal.Location = new System.Drawing.Point(-51, -383);
             this.asztal.Name = "asztal";
             this.asztal.Size = new System.Drawing.Size(1320, 1024);
             this.asztal.TabIndex = 7;
             this.asztal.TabStop = false;
             // 
-            // star2
-            // 
-            this.star2.Image = global::PingPongGame.Properties.Resources.star;
-            this.star2.Location = new System.Drawing.Point(62, 89);
-            this.star2.Name = "star2";
-            this.star2.Size = new System.Drawing.Size(35, 35);
-            this.star2.TabIndex = 16;
-            this.star2.TabStop = false;
-            // 
-            // star3
-            // 
-            this.star3.Image = global::PingPongGame.Properties.Resources.star;
-            this.star3.Location = new System.Drawing.Point(103, 89);
-            this.star3.Name = "star3";
-            this.star3.Size = new System.Drawing.Size(35, 35);
-            this.star3.TabIndex = 17;
-            this.star3.TabStop = false;
-            // 
-            // star4
-            // 
-            this.star4.Image = global::PingPongGame.Properties.Resources.star;
-            this.star4.Location = new System.Drawing.Point(145, 89);
-            this.star4.Name = "star4";
-            this.star4.Size = new System.Drawing.Size(35, 35);
-            this.star4.TabIndex = 18;
-            this.star4.TabStop = false;
-            // 
-            // holy_lbl
-            // 
-            this.holy_lbl.AutoSize = true;
-            this.holy_lbl.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.holy_lbl.Location = new System.Drawing.Point(17, 63);
-            this.holy_lbl.Name = "holy_lbl";
-            this.holy_lbl.Size = new System.Drawing.Size(179, 23);
-            this.holy_lbl.TabIndex = 20;
-            this.holy_lbl.Text = "HOLY SH*T!!!!";
-            // 
-            // ball
-            // 
-            this.ball.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ball.BackColor = System.Drawing.Color.Transparent;
-            this.ball.Image = global::PingPongGame.Properties.Resources.labda1;
-            this.ball.Location = new System.Drawing.Point(546, 310);
-            this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(26, 29);
-            this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ball.TabIndex = 8;
-            this.ball.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.playground);
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.playground.ResumeLayout(false);
             this.playground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.star4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asztal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,6 +328,7 @@
         private System.Windows.Forms.PictureBox star3;
         private System.Windows.Forms.PictureBox star2;
         private System.Windows.Forms.Label holy_lbl;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
