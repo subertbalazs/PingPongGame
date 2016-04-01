@@ -233,9 +233,10 @@
             this.action_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.action_lbl.Location = new System.Drawing.Point(560, 523);
             this.action_lbl.Name = "action_lbl";
-            this.action_lbl.Size = new System.Drawing.Size(350, 84);
+            this.action_lbl.Size = new System.Drawing.Size(460, 84);
             this.action_lbl.TabIndex = 9;
-            this.action_lbl.Text = "Enter - Restart\r\nEsc - Exit";
+            this.action_lbl.Text = "Press Enter to retry\r\nPress Esc to Quit";
+            this.action_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ball
             // 
