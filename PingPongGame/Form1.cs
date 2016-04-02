@@ -140,6 +140,8 @@ namespace PingPongGame
                 star2.Visible = false;
                 star3.Visible = false;
                 star4.Visible = false;
+                progressBar1.Visible = true;
+                progressBar1.Value = 0;
                 timer2.Enabled = false;
 
             }
