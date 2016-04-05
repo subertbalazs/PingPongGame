@@ -61,8 +61,8 @@ namespace PingPongGame
 
             if(ball.Bottom >= racket.Top && ball.Bottom <= racket.Bottom && ball.Left >= racket.Left && ball.Right <= racket.Right)
             {
-                speed_top += 1;
-                speed_left += 1;
+                speed_top += 4;
+                speed_left += 4;
                 speed_top = -speed_top;
                 points += 1;
                 IncrementProgressBar();
